@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: debug enviroment
         run: pwd && ls -la
+      - name: Check out repository code
+        uses: actions/checkout@v4 
       - name: Setup for python
         uses: actions/setup-python@v5
       - name: Run the main file
