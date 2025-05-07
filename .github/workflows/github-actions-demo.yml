@@ -19,7 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: Basic_test
     steps:
+      - name: debug enviroment
+        run: pwd && ls -la
       - name: Setup for python
         uses: actions/setup-python@v5
       - name: Run the main file
-        run: python main.py
+        run: python ./main.py
