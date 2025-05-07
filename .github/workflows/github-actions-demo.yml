@@ -19,9 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: Basic_test
     steps:
-      - name: Test the main file
-        uses: actions/checkout@v4
+      - name: Setup for python
         uses: actions/setup-python@v5
         with: 
           python-version: '3.11'
-      - run: python main.py
+      - name: Run the main file
+        run: python main.py
